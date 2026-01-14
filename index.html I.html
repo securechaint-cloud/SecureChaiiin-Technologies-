@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureChain Technologies</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2688eb;
+      color: #111;
+    }
+
+    header {
+      background: linear-gradient(90deg, #243da0, #8677f7);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 { margin: 0; }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h2 { color: #223da7; }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .auth {
+      background: white;
+      max-width: 350px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .auth h3 {
+      text-align: center;
+      color: #7b6cf6;
+      margin-top: 0;
+    }
+
+    .auth input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .auth button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0a3cff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .auth button:hover {
+      background-color: #7b6cf6;
+    }
+
+    .link {
+      text-align: center;
+      color: #0a3cff;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 10px 0 0;
+    }
+
+    .hidden { display: none; }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>SecureChain Technologies</h1>
+    <nav>
+      <a href="#about">Über uns</a>
+      <a href="#login">Sign In</a>
+      <a href="#signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Der Digitale Produktpass</h2>
+    <p>
+      Blockchain-basierte Transparenz, Sicherheit und CRA-Compliance
+      über den gesamten Produktlebenszyklus.
+    </p>
+  </section>
+
+  <section id="about" class="content">
+    <h3>Was ist der Digitale Produktpass?</h3>
+    <p>
+      Der Digitale Produktpass speichert sicherheitsrelevante Informationen wie
+      Software-Stücklisten (SBOM), Zertifikate und Update-Historien
+      manipulationssicher auf einer Blockchain.
+    </p>
+    <p>
+      SecureChain Technologies unterstützt Unternehmen bei der Einhaltung
+      des Cyber Resilience Acts (CRA) und schafft Vertrauen entlang der Lieferkette.
+    </p>
+  </section>
+
+  <section id="login" class="auth">
+    <h3>Sign In</h3>
+    <input type="email" placeholder="E-Mail" />
+    <input type="password" placeholder="Passwort" />
+    <button type="button" onclick="login()">Anmelden</button>
+    <p class="link" onclick="showReset()">Passwort vergessen?</p>
+  </section>
+
+  <section id="signup" class="auth">
+    <h3>Sign Up</h3>
+    <input type="text" placeholder="Name" />
+    <input type="email" placeholder="E-Mail" />
+    <input type="password" placeholder="Passwort" />
+    <button type="button" onclick="signup()">Registrieren</button>
+  </section>
+
+  <section id="reset" class="auth hidden">
+    <h3>Passwort zurücksetzen</h3>
+    <input type="email" placeholder="E-Mail" />
+    <button type="button" onclick="resetPassword()">Link senden</button>
+  </section>
+
+  <footer>
+    <p>© 2026 SecureChain Technologies – Blockchain & Cyber Security</p>
+  </footer>
+
+  <script>
+    function login() {
+      alert("Sign In erfolgreich (Demo)");
+    }
+
+    function signup() {
+      alert("Registrierung erfolgreich (Demo)");
+    }
+
+    function showReset() {
+      document.getElementById("reset").classList.remove("hidden");
+      window.location.hash = "reset";
+    }
+
+    function resetPassword() {
+      alert("Passwort-Reset-Link gesendet (Demo)");
+    }
+  </script>
+</body>
+</html>
